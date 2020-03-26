@@ -169,7 +169,7 @@ $(function()
     
     function scode(){ var scode=$("#scode").val();if(scode.length > 15){return true;}else{return false;}}
 
-    // Connect TO DropDown To Each Other  
+// Connect TO DropDown To Each Other  
      $(document).ready(function(){
  $('.action').change(function(){
   if($(this).val() != '')

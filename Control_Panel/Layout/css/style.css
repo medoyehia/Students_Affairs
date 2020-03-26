@@ -126,6 +126,7 @@ body
     background-color: #08526d;
     color: #fff;
 }
+
 .u li{
     padding: 10px;
     overflow: hidden;
@@ -244,4 +245,15 @@ label
 .option .active{
     color: red;
     font-weight: bold;
+}
+/*********************************** Request Page**************************/
+.display{
+    font-size: 15px;
+    font-family: sans-serif;
+    
+}
+.display .content{
+    padding: 5px;
+    border-top: 1px solid #EEE;
+    color: dimgrey;
 }

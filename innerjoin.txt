@@ -20,6 +20,23 @@ INNER JOIN
 services
 ON
 services.ID=request.Request_Classification
+////////////////////////////////
+SELECT student.Student_Name,services.Filename,respons_to_request.Requester_Replay,respons_to_request.Requester_message,respons_to_request.Date
+FROM respons_to_request
+INNER JOIN
+student
+ON
+student.Student_SSN=respons_to_request.Respons_Staff_SSN
+INNER JOIN
+request
+ON
+request.Request_ID=respons_to_request.Respons_Request_ID
+INNER JOIN
+services
+ON
+services.ID=request.Request_Classification
+WHERE respons_to_request.status=1 
+//////////////////////////////////////
 
 Notice: Undefined index: Student_Accept in C:\xampp\htdocs\FinalGraduationProject\Control_Panel\Requests.php on line 86
     echo '<button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#myModal">

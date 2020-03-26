@@ -81,97 +81,66 @@
                         echo '</tr>'; 
                         
                             ?>
-                <div id="myModal<?php echo $row['Request_ID'] ?>" class="modal fade bd-example-modal-lg" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header colcard">
-                                 <h5 class="modal-title text-white">Request detailes</h5>
-                                 <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+               
+            <div class="modal fade" id="myModal<?php echo $row['Request_ID'] ?>">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header colcard">
+                            <h5 class="modal-title text-white">Request detailes</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row display">
+                                    <div class="col-md-3">
+                                        <!--<img src="teacher_image/'.$row["teacher_image"].'" class="img-thumbnail" />-->
+                                        <img src="i.jpg" width="150" height="170">
+                                    </div>
+                               
+                                    <div class="col col-sm-9">
+                                      <div class="row content">
+                                          <div class="col col-sm-4 text-info">Name <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Student_Name']; ?></div>
+                                      </div>
+                                      <div class="row content">
+                                          <div class="col col-sm-4 text-info">Email <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Requester_Email']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info">Level <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Level_Name']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info">Department <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Department_Name']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info">Statment <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Wish_Name']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info">Division <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Request_Division']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info">Request <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Filename']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info ">Request Other Title <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-5 ">: <?php echo $row['Request_Other_Title']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info">Request Priority <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-3 ">: <?php echo $row['Request_Priority']; ?></div>
+                                      </div>
+                                        <div class="row content">
+                                          <div class="col col-sm-4 text-info">Position Recruitment : <strong class="text-danger">*</strong></div>
+                                          <div class="col col-sm-3 ">: <?php echo $row['Position_Recruitment']; ?></div>
+                                      </div>
+                                     </div>
+                                 </div>
                             </div>
-                            <div class="modal-body">
-                             <div class="container">
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Student Name :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Student_Name']; ?>
-                                     </div>
-                                </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Student Email :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Requester_Email']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Level :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Level_Name']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Department :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Department_Name']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Wish Name :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Wish_Name']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Division :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Request_Division']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Filename :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Filename']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Request Other Title :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Request_Other_Title']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Request Priority :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Request_Priority']; ?>
-                                     </div>
-                                 </div>
-                                 <div class="row">
-                                     <div class="col col-sm-4">
-                                        <label class="text-info">Position Recruitment :</label>
-                                     </div>
-                                     <div class="col col-sm-4">
-                                        <?php echo $row['Position_Recruitment']; ?>
-                                     </div>
-                                 </div>
-                                 
-                             </div>
                             </div>
                             <div class="modal-footer">
                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -221,6 +190,9 @@
                                  </form>
                             </div>
                         </div>
+                             <div class="modal-footer">
+                               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -494,10 +466,83 @@
         
         ///////////////////////////////////////////////////// Delete Requests In DataBase //////////////////////////////////////
         }elseif($do == 'Delete') {
-         
+             echo '<h1 class="text-center">Delete Page</h1>';
+                    echo '<div class="container" > ';
+                    
+                    $Request_Id=isset($_GET['Request_ID']) && is_numeric($_GET['Request_ID'])?intval($_GET['Request_ID']) : 0; //content ssn own admin
+
+
+                  
+                    $check=checkItem("Request_ID","request",$Request_Id);
+
+                   
+                    if($check > 0)
+                    {
+                           $query="DELETE FROM request WHERE Request_ID='".$Request_Id."' "; 
+                             $result=mysqli_query($connection,$query);
+                            if(!empty($result))
+                                $theMsg= '<div class="alert alert-success alert-dismissible fade show" role="alert" >This Request Is Deleted </div>';
+                                redirectHome($theMsg,'back');
+
+
+                    }else{
+                        $theMsg='<div class="alert alert-danger">this id is not exist</div>';
+                        redirectHome($theMsg);
+
+                    }
+        
+                echo '</div>';
         ///////////////////////////////////////////////////// Activate Requests In DataBase //////////////////////////////////////    
-        }elseif($do == 'Activate') {
-            
+        }elseif($do == 'ResponseManage') {
+             $query="SELECT
+             student.Student_Name,services.Filename,respons_to_request.Requester_Replay,respons_to_request.Requester_message,respons_to_request.Date
+             FROM respons_to_request
+             INNER JOIN
+             student    
+             ON
+             student.Student_SSN=respons_to_request.Respons_Staff_SSN
+             INNER JOIN
+             request
+             ON
+             request.Request_ID=respons_to_request.Respons_Request_ID
+             INNER JOIN
+             services
+             ON
+             services.ID=request.Request_Classification
+             WHERE respons_to_request.status=1 ";
+            $result=mysqli_query($connection,$query);
+            if(!$result)
+            {
+                die("errror");
+            }
+                ?>
+                <br>    
+                <div class="container">
+                    <div class="table-responsive">
+                        <table id="example" class="table table-bordered" style="width:100%">
+                            <thead class="main-table ">
+                                <tr>
+                                    <td>Staff Name</td>
+                                    <td>Request Name</td>
+                                    <td>Resonse Title</td>
+                                    <td>Resonse Message</td>
+                                    <td>Date</td>
+                                    
+
+                                </tr>
+                            </thead>
+                            <?php
+            while($row=mysqli_fetch_array($result))
+                {
+                echo '<tr>'; 
+                echo '<td>'.$row['Student_Name'].'</td>';
+                echo '<td>'.$row['Filename'].'</td>';
+                echo '<td>'.$row['Requester_Replay'].'</td>';
+                echo '<td>'.$row['Requester_message']. '</td>';
+                echo '<td>'.$row['Date']. '</td>';
+                echo '</tr>'; 
+            }
+                           
         ///////////////////////////////////////////////////// Response Requests In DataBase //////////////////////////////////////
         }elseif($do == 'Response') {
              if($_SERVER['REQUEST_METHOD']=='POST')
@@ -552,9 +597,9 @@
                 $query="
                 INSERT INTO 
                     respons_to_request
-                    (Requester_Replay,Requester_message,Request_Image,Respons_Request_ID,Respons_Staff_SSN,Response_Request_Code,Date) 
+                    (Requester_Replay,Requester_message,Request_Image,Respons_Request_ID,Respons_Staff_SSN,Response_Request_Code,Date,status) 
                 VALUES
-                    ('".$Requester_Replay."','".$Requester_message."','".$Request_Image."', '".$Respons_Request_ID."','".$_SESSION['Student_SSN']."','".$Response_Request_Code."',now())";
+                    ('".$Requester_Replay."','".$Requester_message."','".$Request_Image."', '".$Respons_Request_ID."','".$_SESSION['Student_SSN']."','".$Response_Request_Code."',now(),1)";
                 
                 $result=mysqli_query($connection,$query);
                 if(!empty($result)){

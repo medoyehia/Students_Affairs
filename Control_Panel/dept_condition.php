@@ -116,6 +116,11 @@
                        <?php } ?>
                     </table>
                 </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <a href="dept_condition.php?do=Add" class="btn btn-info"><i class="fa fa-plus"></i> Insert department</a>
+                    </div>
+                </div>
             </div>
         </main>
     </div> 
