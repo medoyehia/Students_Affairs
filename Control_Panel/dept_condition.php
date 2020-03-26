@@ -29,8 +29,8 @@
                        <thead class="main-table ">
                         <tr>
                             <td >Department Name</td>
-                            <td >Department Title</td>
-                            <td width="55%" >Department_Description</td>
+                            <td >Title</td>
+                            <td width="55%" >Description</td>
                             <td width="20%">Action </td>
 
                         </tr>
@@ -328,25 +328,17 @@
    
         ///////////////////////////////////////////////////// Delete Requests In DataBase //////////////////////////////////////
         }elseif($do == 'Delete') {
-             //Delete page
+            
                     echo '<h1 class="text-center">Delete Page</h1>';
                     echo '<div class="container" > ';
-                       // Check If GET Request SSN Is Numeric & Get The Integer Value Of It 
-
+                    
                     $Department_Id=isset($_GET['Department_ID']) && is_numeric($_GET['Department_ID'])?intval($_GET['Department_ID']) : 0; //content ssn own admin
 
 
-                    //Select All Data From DB Depend On This SSN
-                    //$query="select * from staff where Staff_ID='".$Staff_id."' Limit 1 ";
+                  
                     $check=checkItem("Department_ID","level_department",$Department_Id);
 
-                    //Execute Query
-                  //$result=mysqli_query($connection,$query);
-
-                    //If Select Content The Data $count Content The Number Of Row Featched
-                   // $count=mysqli_num_rows($result);
-
-                    //If $count value greater than from 0 .. return data in inputs
+                   
                     if($check > 0)
                     {
                            $query="DELETE FROM level_department WHERE Department_ID='".$Department_Id."' "; 
