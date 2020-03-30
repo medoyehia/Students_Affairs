@@ -334,6 +334,7 @@ function load_unseen_notification(view = '')
             $('.condition .full-view').fadeOut(200);
         }
     });
+    
 });
 
 
