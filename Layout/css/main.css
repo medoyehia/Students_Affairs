@@ -17,6 +17,11 @@ body{
     margin-left: 5px;
     
 }
+.colcard{
+    background-color:#08526d;
+    color: #fff;
+    text-align: center;
+}
 /* End Upper Bar */
 
 /* Start Navbar */
@@ -88,13 +93,13 @@ body{
     background-size: cover;
 }
 .slider .carousel-one {
-   background-image: url('../Image/image.jpg');
+     background-image: url('../Image/fm.jpg');
 }
 .slider .carousel-two {
-    background-image: url('../Image/image2.jpg');
+    background-image: url('../Image/mn.jpg');
 }
 .slider .carousel-three {
-    background-image: url('../Image/image3.jpg');
+    background-image: url('../Image/arts.jpg');
 }
 .slider .carousel-indicators li{
     cursor: pointer;
@@ -211,7 +216,34 @@ body{
 .featured-work .row .col-md img{
     width: 100%;
 }
+/* End Gallery */
 
+/* Start Latest Posts */
+.latest-posts{
+    padding: 0 0 100px;
+}
+
+.latest-posts .h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.latest-posts .discription{
+    line-height: 1.6;
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto 20px;
+    color: #6a6a6a;
+}
+.latest-posts .card{
+    margin-bottom: 30px;
+    
+}
+.latest-posts .card .card-title{
+    font-size: 20px;
+    line-height: 1.6;
+}
+/* End Latest Posts */
 
 
 

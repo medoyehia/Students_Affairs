@@ -11,7 +11,7 @@
         $do=isset($_GET['do'])?$_GET['do']:'Manage';
         ///////////////////////////////////////////////////// Show All Requests ///////////////////////////////////////////////// 
         if($do == 'Manage'){
-          $query="SELECT request.*,student.Student_Name,student.Student_Code,levels.Level_Name,levels_department.Department_Name,wish_statment.Wish_Name,services.Filename
+          $query="SELECT request.*,student.Student_Name,student.Student_Code,levels.Level_Name,level_department.Department_Name,wish_statment.Wish_Name,services.Filename
             FROM request
             INNER JOIN
             student
@@ -22,9 +22,9 @@
             ON
             levels.Level_ID=request.Request_Level_ID
             INNER JOIN
-            levels_department
+            level_department
             ON
-            levels_department.Department_ID=request.Request_Dept_ID
+            level_department.Department_ID=request.Request_Dept_ID
             INNER JOIN
             wish_statment
             ON
