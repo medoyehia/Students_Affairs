@@ -7,7 +7,7 @@
    
     <link rel="stylesheet" href="Layout/css/bootstrap.min.css">
     <link href="Layout/css/fontawesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="Layout/css/main.css">
+    <link rel="stylesheet" href="Layout/css/copymain.css">
     <title>Student Affairs</title>
 </head>
 <body>
